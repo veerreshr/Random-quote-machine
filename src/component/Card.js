@@ -4,6 +4,8 @@ import axios from "axios";
 const Card = () => {
   const [quote, setQuote] = useState("New quote on your way...");
   const [author, setAuthor] = useState("Author");
+  const API_KEY = process.env.REACT_APP_API_KEY;
+  console.log(API_KEY);
   useEffect(() => {
     callApi();
   }, []);
@@ -14,7 +16,7 @@ const Card = () => {
       headers: {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "quotes15.p.rapidapi.com",
-        "x-rapidapi-key": "",
+        "x-rapidapi-key": API_KEY,
         useQueryString: true,
       },
       params: {
