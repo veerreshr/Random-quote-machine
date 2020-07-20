@@ -14,7 +14,7 @@ const Card = () => {
       headers: {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "quotes15.p.rapidapi.com",
-        "x-rapidapi-key": "2ee913a67amsh4cd74b67cbd35ebp12e0cejsn3d1b82a0d950",
+        "x-rapidapi-key": "",
         useQueryString: true,
       },
       params: {
