@@ -2,4 +2,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Live at :
 
-[Random Quote Machine](https://veerreshr.github.io/Random-quote-machine)
+[Random Quote Machine](https://veerreshr.github.io/Random-quote-machine/)
