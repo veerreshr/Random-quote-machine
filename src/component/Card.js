@@ -62,6 +62,15 @@ const Card = () => {
         >
           <i className="fa fa-twitter"></i> Tweet
         </a>
+        <a
+          id="tweet-quote"
+          href={`https://api.whatsapp.com/send?text==${quote}                                                               - ${author}`}
+          data-action="share/whatsapp/share"
+          target="_blank"
+          className="col-md-3 btn btn-primary  "
+        >
+          <i className="fa fa-whatsapp"></i> status
+        </a>
       </div>
     </div>
   );
