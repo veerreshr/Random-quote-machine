@@ -4,28 +4,21 @@ import axios from "axios";
 const Card = () => {
   const [quote, setQuote] = useState("New quote on your way...");
   const [author, setAuthor] = useState("Author");
-  const API_KEY = process.env.REACT_APP_API_KEY;
-  console.log(API_KEY);
   useEffect(() => {
     callApi();
   }, []);
   function callApi() {
     axios({
       method: "GET",
-      url: "https://quotes15.p.rapidapi.com/quotes/random/",
-      headers: {
-        "content-type": "application/octet-stream",
-        "x-rapidapi-host": "quotes15.p.rapidapi.com",
-        "x-rapidapi-key": API_KEY,
-        useQueryString: true,
-      },
+      url: "https://type.fit/api/quotes",
       params: {
         language_code: "en",
       },
     })
       .then((response) => {
-        setQuote(response.data.content);
-        setAuthor(response.data.originator.name);
+      const quote = response.data[Math.floor(Math.random() * response.data.length)];
+        setQuote(quote.text);
+        setAuthor(quote.author);
       })
       .catch((error) => {
         console.log(error);
